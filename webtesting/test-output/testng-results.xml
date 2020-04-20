@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Regression Testsuite" duration-ms="45981" started-at="2020-04-20T12:42:14Z" finished-at="2020-04-20T12:43:00Z">
+    <groups>
+    </groups>
+    <test name="Example Testcases" duration-ms="45981" started-at="2020-04-20T12:42:14Z" finished-at="2020-04-20T12:43:00Z">
+      <class name="testcases.ExampleTestcase0001">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:testcases.ExampleTestcase0001@357246de]" name="Setup" is-config="true" duration-ms="13935" started-at="2020-04-20T14:42:14Z" finished-at="2020-04-20T14:42:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:testcases.ExampleTestcase0001@357246de]" name="Test" duration-ms="3261" started-at="2020-04-20T14:42:28Z" finished-at="2020-04-20T14:42:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:testcases.ExampleTestcase0001@357246de]" name="Cleanup" is-config="true" duration-ms="733" started-at="2020-04-20T14:42:31Z" finished-at="2020-04-20T14:42:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+      </class> <!-- testcases.ExampleTestcase0001 -->
+      <class name="testcases.ExampleTestcase0002">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:testcases.ExampleTestcase0002@28f67ac7]" name="Setup" is-config="true" duration-ms="13974" started-at="2020-04-20T14:42:32Z" finished-at="2020-04-20T14:42:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:testcases.ExampleTestcase0002@28f67ac7]" name="Test" duration-ms="13353" started-at="2020-04-20T14:42:46Z" finished-at="2020-04-20T14:42:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="Cleanup()[pri:0, instance:testcases.ExampleTestcase0002@28f67ac7]" name="Cleanup" is-config="true" duration-ms="706" started-at="2020-04-20T14:42:59Z" finished-at="2020-04-20T14:43:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Cleanup -->
+      </class> <!-- testcases.ExampleTestcase0002 -->
+    </test> <!-- Example Testcases -->
+  </suite> <!-- Regression Testsuite -->
+</testng-results>

@@ -1,0 +1,55 @@
+package com.automationpractice.pageobject.signin;
+
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class HomePageObjectClass {
+	private WebDriver driver;
+
+	private By signInButton = By.cssSelector(".login");
+
+	private By passwordLocator = By.id("passwd");
+
+	private By signInLocator = By.id("SubmitLoginq");
+	
+	private By authStatPassed = By.xpath("//p[text()='Welcome to your account. "
+			+ "Here you can manage all of your personal information and orders.']");
+	
+	private By authStatFailed = By.xpath("//li[text()='Authentication Failure.'");
+
+	public HomePageObjectClass(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void signInWith(String userName, String password) {
+		WebElement EUserName = findElement(userNameLocator);
+		EUserName.click();
+		EUserName.sendKeys(userName);
+		WebElement Epassword = findElement(passwordLocator);
+		Epassword.click();
+		Epassword.sendKeys(password);
+		WebElement signIn = findElement(signInLocator);
+		signIn.click();
+	}
+	
+	private WebElement findElement(By locator) {
+		  return driver.findElement(locator);
+		}
+	
+	private List<WebElement> findElements(By locator) {
+		  return driver.findElements(locator);
+		}
+
+	public String authenticationStatus(){
+		try {
+			findElement(authStatFailed).getText();
+			return "Passed";
+		} catch (Exception e) {
+			findElement(authStatPassed).getText();
+			return "Failed";
+		}
+	
+	}
+}

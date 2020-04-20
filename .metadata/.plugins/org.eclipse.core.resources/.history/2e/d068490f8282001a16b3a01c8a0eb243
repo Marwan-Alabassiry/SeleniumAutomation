@@ -1,0 +1,47 @@
+package com.automationpractice.pageobject.signin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SignInPageObjectClass {
+	private WebDriver driver;
+
+	private WebDriverWait wait;
+
+	private By userNameLocator = By.id("userNameId");
+
+	private By passwordLocator = By.id("passwordId");
+
+	private By signInLocator = By.id("signInId");
+
+	public SignInPageObjectClass(WebDriver driver) {
+
+		this.driver = driver;
+
+		this.wait = new WebDriverWait(driver, 30);
+
+	}
+
+	public void signInWith(String userName, String password) {
+
+		WebElement EUserName = findElement(userNameLocator);
+
+		EUserName.click();
+
+		EUserName.sendKeys(userName);
+
+		WebElement Epassword = findElement(passwordLocator);
+
+		Epassword.click();
+
+		Epassword.sendKeys(password);
+
+		WebElement signIn = findElement(signInLocator);
+
+		signIn.click();
+
+	}
+
+}

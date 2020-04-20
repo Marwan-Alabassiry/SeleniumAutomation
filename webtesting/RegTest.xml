@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Testsuite">
+  <test name="Example Testcases">
+    <classes>
+      <class name="testcases.ExampleTestcase0001"/>
+      <class name="testcases.ExampleTestcase0002"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

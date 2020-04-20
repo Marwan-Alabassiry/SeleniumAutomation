@@ -1,0 +1,5 @@
+package com.automationpractice.pageobject.signin;
+
+public class SignInPageObjectClass {
+
+}

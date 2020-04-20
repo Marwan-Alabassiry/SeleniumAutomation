@@ -1,0 +1,29 @@
+package testcases;
+
+import org.testng.annotations.Test;
+
+import com.automationpractice.webtesting.SuperTestcase;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
+
+public class ExampleTestcase0001 extends SuperTestcase{
+	
+	public ExampleTestcase0001(String driver, String URL, int timeoutInSeconds, boolean maximizeScreen) {
+		super(driver, URL, timeoutInSeconds, maximizeScreen);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Test
+	public void Testcase() {
+	}
+
+	@BeforeTest
+	public void Setup() {
+	}
+
+	@AfterTest
+	public void Cleanup() {
+	}
+
+}

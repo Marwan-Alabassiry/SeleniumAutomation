@@ -1,0 +1,64 @@
+package com.automationpractice.pageobject.signin;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.automationpractice.webtesting.URL;
+
+public class SignInPageObjectClass {
+	private WebDriver driver;
+
+	private static By userNameLocator = By.id("email");
+
+	private static By passwordLocator = By.id("passwd");
+
+	private static By signInLocator = By.id("SubmitLogin");
+	
+	private static By authStatPassed = By.xpath("//p[text()='Welcome to your account. "
+			+ "Here you can manage all of your personal information and orders.']");
+	
+	private static By authStatFailed = By.xpath("//li[text()='Authentication failed.']");
+
+	public SignInPageObjectClass(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	/**
+	 * Initiates the test case with the driver and the URL for the website to be
+	 * tested The URL argument must specify an absolute {@link URL}. The driver
+	 * argument is the name of the web browser to be used in the test scenario
+	 * 
+	 * @param userName
+	 *            email to sign in
+	 * @param password
+	 *            password for the corresponding email
+
+	 * 
+	 */
+	public void signInWith(String userName, String password) {
+		WebElement EUserName = findElement(userNameLocator);
+		EUserName.click();
+		EUserName.sendKeys(userName);
+		WebElement Epassword = findElement(passwordLocator);
+		Epassword.click();
+		Epassword.sendKeys(password);
+		WebElement signIn = findElement(signInLocator);
+		signIn.click();
+	}
+	
+	private WebElement findElement(By locator) {
+		  return driver.findElement(locator);
+		}
+	
+	public String authenticationStatus(){
+		try {
+			findElement(authStatFailed).getText();
+			return "Failed";
+		} catch (Exception e) {
+			findElement(authStatPassed).getText();
+			return "Passed";
+		}
+	
+	}
+}

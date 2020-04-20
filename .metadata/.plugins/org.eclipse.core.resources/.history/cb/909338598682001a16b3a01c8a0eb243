@@ -1,0 +1,31 @@
+package testcases;
+
+import org.testng.annotations.Test;
+
+import com.automationpractice.pageobject.signin.SignInPageObjectClass;
+import com.automationpractice.webtesting.Testcase;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+
+public class ExampleTestcase0001 extends Testcase{
+	
+	@Test
+	public void Test() {
+		SignInPageObjectClass page = new SignInPageObjectClass(wDriver);
+		page.signInWith("test@test.com", "password");
+		Assert.assertEquals(page., expected);
+	}
+
+	@BeforeTest
+	public void Setup() {
+		Testcase.init("chrome", "http://automationpractice.com/", 10, true);
+	}
+
+	@AfterTest
+	public void Cleanup() {
+		Testcase.quit();
+	}
+
+}

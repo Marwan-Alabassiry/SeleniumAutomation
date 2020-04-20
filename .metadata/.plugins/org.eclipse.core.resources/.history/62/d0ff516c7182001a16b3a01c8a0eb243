@@ -1,0 +1,40 @@
+package com.automationpractice.webtesting;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SuperTestcase {
+	/*
+	 * Initiates the test case with the driver and the URL for the website to
+	 * be tested
+	 * The URL argument must specify an absolute {@link URL}. The driver 
+	 * argument is the name of the web browser to be used in the test
+	 * scenario
+	 * 
+	 * @param URL an absolute URL of the web site
+	 * @param driver the name of the browser, you can either choose chrome or
+	 * firefox
+	 * @param timeoutInSeconds is an integer of the maximum implicit timeout
+	 * if equals zero then no implicit timeout is added, maximum timeout 
+	 * however is 20 seconds
+	 * @param maximizeScreen set to "true" for having the screen maximized
+	 * 
+	 */
+	public SuperTestcase(String driver, String URL, int timeoutInSeconds, boolean maximizeScreen){
+		WebDriver wDriver;
+		String driverStrTrim = driver.trim().toLowerCase();
+		if(driverStrTrim.equals("chrome")){
+			wDriver = new ChromeDriver();
+		}
+		else if(driverStrTrim.equals("firefox")){
+			wDriver = new FirefoxDriver();
+		}
+		else{
+			wDriver = null;
+		}
+		
+		
+		
+	}
+}
