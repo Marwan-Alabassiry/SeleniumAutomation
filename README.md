@@ -13,6 +13,7 @@ Boring web-based administration tasks can (and should) also be automated as well
   - TestNG integration
   - SureFire plugin
   - Maven
+  - Ready for CI
 
 
 ### Installation
